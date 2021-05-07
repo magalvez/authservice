@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  authservice:
+    container_name: authservice
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - authservice
+    environment:
+        - US_API_V1_URL=http://userservice:8200/userservice/api/v1.0
+    command: 'python app.py runserver 0.0.0.0:8100'
+    ports:
+        - 8100:8100
+    volumes:
+        - .:/app
+
+networks:
+  authservice:
+    name: authservice
+    driver: bridge
