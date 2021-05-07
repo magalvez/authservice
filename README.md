@@ -6,9 +6,10 @@ Note: This is automatic in the workflow execution process, but if you want to te
 
 ## Prepare your environment
 
-    ## 1) mkdir Playvox
-    ## 2) git clone https://github.com/magalvez/authservice.git
-    ## 3) docker-compose up -d
+    ## 1) mkdir Playvox (check if was already created)
+    ## 2) cd Playvox
+    ## 3) git clone https://github.com/magalvez/authservice.git
+    ## 4) docker-compose up -d
 
 # Service URL
 http://localhost:8100/
