@@ -1,4 +1,29 @@
-To use pipenv follow this steps:
+# authservice
+
+This service is in charge to generate the JWT token to be use across the workflow process and passed to all the endpoints.
+
+Note: This is automatic in the workflow execution process, but if you want to test it via postman API you need to call the endpoint directly.
+
+## Prepare your environment
+
+    ## 1) mkdir Playvox
+    ## 2) https://github.com/magalvez/authservice.git
+    ## 3) docker-compose up -d
+
+# Service URL
+http://localhost:8100/
+
+## Testing via postmant
+To test it with postman use the following collection:
+https://www.getpostman.com/collections/e1daefda0d281339afeb
+
+This is how you should generate the JWT token
+<img src="https://firebasestorage.googleapis.com/v0/b/tennis-rank-prod.appspot.com/o/static%2FScreen%20Shot%202021-05-07%20at%209.11.50%20AM.png?alt=media&token=52dee3ae-042b-4248-85b4-f41cf8b7fded"></img>
+
+
+---------------------------------------------
+
+To use without dokcer pipenv follow this steps:
 
 1) pip install pipenv
 2) pipenv shell
