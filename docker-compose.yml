@@ -7,6 +7,7 @@ services:
       dockerfile: Dockerfile
     networks:
       - authservice
+      - customerservice
     environment:
         - US_API_V1_URL=http://userservice:8200/userservice/api/v1.0
     command: 'python app.py runserver 0.0.0.0:8100'
@@ -18,4 +19,7 @@ services:
 networks:
   authservice:
     name: authservice
+    driver: bridge
+  customerservice:
+    name: customerservice
     driver: bridge

@@ -10,7 +10,7 @@ from datetime import datetime
 
 from flask_jwt import JWT, JWTError
 
-from app.api.us_api.v1_1.userservice_api import auth_user
+from app.api.us_api.v1_1.user_service_api import auth_user
 from default_config import JWT_AUTH_URL_RULE, SECRET_KEY
 
 app.config["JWT_AUTH_URL_RULE"] = JWT_AUTH_URL_RULE
@@ -80,6 +80,7 @@ def make_payload(user):
 
     payload = {
         "user_id": user['user_id'],
+        "pin": user['pin'],
         "expiration_date": (
             datetime.utcnow() + app.config["JWT_EXPIRATION_DELTA"]
         ).strftime("%m/%d/%Y"),
@@ -105,5 +106,6 @@ def make_response(payload):
 
     return {
         "user_id": user['user_id'],
+        "pin": user['pin'],
         "token": payload,
     }
