@@ -7,7 +7,7 @@ Note: This is automatic in the workflow execution process, but if you want to te
 ## Prepare your environment
 
     ## 1) mkdir Playvox
-    ## 2) https://github.com/magalvez/authservice.git
+    ## 2) git clone https://github.com/magalvez/authservice.git
     ## 3) docker-compose up -d
 
 # Service URL
